@@ -441,7 +441,7 @@ import { useNavigate } from 'react-router-dom';
 // CombinedMessageBox Component
 const CombinedMessageBox = ({ userMessage, assistantMessage, isDarkMode, renderAssistantContent, loading, loadingMessage, sources }) => (
   <div
-    className={`max-w-2xl mx-auto p-4 mb-4 mt-8 rounded-lg border bg-[#FEFCF4] `}
+    className={`max-w-2xl min-w-[900px] mx-auto p-4 mb-4 mt-8 rounded-lg border bg-[#FEFCF4] `}
     // className={`max-w-2xl mx-auto p-4 mb-4 mt-8 rounded-lg border bg-[#FEFCF4] ${
     // isDarkMode ? 'border-gray-700 bg-gray-800/10' : 'border-gray-200 bg-white'
     //   }`}
@@ -804,7 +804,7 @@ const ResearchChat = () => {
               </div>
             </div>
           ) : (
-            <div className="pb-32">
+            <div className="pb-2">
               {messages.map((message) => (
                 <CombinedMessageBox 
                   key={message.id} 
@@ -825,18 +825,18 @@ const ResearchChat = () => {
         {/* Input Box */}
         {!isEmpty && (
           <div 
-            className={`fixed bottom-0 p-4 w-full border-t ${
+            className={`sticky bottom-0 p-4 w-full border-t ${
               isDarkMode ? 'border-gray-700' : 'border-gray-200'
             }`}
             style={{ backgroundColor: isDarkMode ? '#212121' : '#ffffff'}}
           >
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl min-w-[850px] mx-auto">
               <form onSubmit={handleSubmit} className="relative">
                 <input
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask about legal cases..."
+                  placeholder="Ask about legal cases.."
                   className={`w-full p-4 pr-12 rounded-lg border focus:outline-none focus:ring-2 focus:ring-purple-500 ${
                     isDarkMode 
                       ? 'border-gray-600 bg-gray-800 text-white placeholder-gray-400' 
