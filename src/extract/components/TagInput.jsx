@@ -220,14 +220,14 @@ const TagInput = ({ onBack, onNext }) => {
   const [newTag, setNewTag] = useState('');
   
   const suggestedTags = [
-    "agreement_date",
-    "parties_involved",
+    "agreement date",
+    "parties involved",
     "address",
-    "organization_involved",
-    "important_dated",
+    "organization involved",
+    "important dates",
     "amount",
-    "partner_capital_contribution %",
-    "amount_contributed_for_all_partners"
+    "partner capital contribution %",
+    "amount contributed for all partners"
   ];
 
   const handleAddTag = (e) => {

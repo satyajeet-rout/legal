@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
 /* 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -204,4 +208,35 @@ button:focus-visible {
     width: 84% !important;
   }
   
+}
+
+
+
+
+
+@keyframes blink {
+
+  0%,
+  20% {
+    opacity: 1;
+  }
+
+  20.1%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.dot-1 {
+  animation: blink 1.4s infinite both;
+}
+
+.dot-2 {
+  animation: blink 1.4s infinite both;
+  animation-delay: 0.2s;
+}
+
+.dot-3 {
+  animation: blink 1.4s infinite both;
+  animation-delay: 0.4s;
 }
